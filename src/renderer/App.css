@@ -2,17 +2,52 @@
  * @NOTE: Prepend a `~` to css file paths that are in your node_modules
  *        See https://github.com/webpack-contrib/sass-loader#imports
  */
+ @tailwind base;
+ @tailwind components;
+ @tailwind utilities;
+
+ /* @import "flowbite/src/themes/default";
+ @plugin "flowbite/plugin";
+
+ @source "../node_modules/flowbite"; */
+
+ @plugin "flowbite-typography";
+
+* {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  /* font-weight: 100; */
+  /* font-style: normal; */
+}
+
+.poetsen-one-regular {
+  font-family: "Poetsen One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.pacifico-regular {
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {
+  font-weight: 300;
+}
+
+
 body {
   position: relative;
-  color: white;
+  /* color: white; */
   height: 100vh;
   background: linear-gradient(
     200.96deg,
-    #fedc2a -29.09%,
-    #dd5789 51.77%,
-    #7a2c9e 129.35%
+    #34495e -29.09%,
+    #FBF6E9 51.77%,
+    #2c3e50 129.35%
   );
-  font-family: sans-serif;
+  /* font-family: sans-serif; */
   overflow-y: hidden;
   display: flex;
   justify-content: center;
@@ -59,4 +94,11 @@ a:hover {
   justify-content: center;
   align-items: center;
   margin: 20px 0;
+}
+
+.animation-container{
+  /* width: 100px;
+  height: 100px; */
+  position: relative;
+  transition: top 1s;
 }
